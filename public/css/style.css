@@ -74,7 +74,7 @@ body {
     line-height: 1.5;
     color: #212529;
     text-align: left;
-    background-color: black:
+    background-color: black;
 }
 
 [tabindex="-1"]:focus {
@@ -11610,4 +11610,9 @@ figure figcaption {
 
 .nth:nth-child(2) {
     order: 2
+}
+
+.alert {
+    background: #79c879;
+    display: none;
 }

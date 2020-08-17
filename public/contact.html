@@ -79,7 +79,8 @@
             <div class="row slider-text align-items-center justify-content-center text-center">
                 <div class="col-lg-12 col-sm-12">
                     <h1 class="mb-4" data-aos="fade-up" data-aos-delay="">Contact Us</h1>
-                    <p class="custom-breadcrumbs" data-aos="fade-up" data-aos-delay="100"><a href="index.html">Home</a> <span class="mx-3">/</span> Contact</p>
+
+
                 </div>
             </div>
         </div>
@@ -87,40 +88,70 @@
 
     <div class="section">
         <div class="container">
+            <h3 class="text-center alert">"Thanks for getting in touch with us ,We will contact you soon."</h3>
             <div class="row mb-5">
 
                 <div class="col-12 mb-5 order-2">
-                    <form method="POST" data-netlify="true" id="contactform">
+                    <form id="contactform">
                         <div class="row">
                             <div class="col-md-6 form-group">
-                                <label for="name">Name</label>
-                                <input type="text" id="name" class="form-control ">
+                                <label>Name</label>
+                                <input type="text" id="name" name="name" class="form-control " required>
                             </div>
                             <div class="col-md-6 form-group">
-                                <label for="phone">Phone</label>
-                                <input type="text" id="phone" class="form-control ">
+                                <label>Phone</label>
+                                <input type="text" id="phone" name="phone" class="form-control ">
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12 form-group">
+                                <label>Email</label >
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+                                <label >Company Name/ Organisation</label >
+                                <input  type="text" id="companyname" name="companename" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+                                <label >Budget</label >
+                                <select type="text" id="budget" name="budget" class="form-control">
+                                    <option value="Below 500$">Below 500$</option>
+                                    <option value="$500-1000$">$500-1000$</option>
+                                    <option value="$1000-2000$">$1000-2000$</option>
+                                    <option value="$2000-4000$">$2000-4000$</option>
+                                    <option value="Above 4000$">Above 4000$</option>
+                                    
+                                </select>
 
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12 form-group">
-                                <label for="email">Email</label >
-                                <input type="email" id="email" class="form-control">
+                                <label  >Service</label >
+                                <select  type="text" id="Service" name="Service" class="form-control" aria-selected="false">
+                                    <option value="Web development">Web development</option>
+                                    <option value="App development">App development</option>
+                                    <option value="Digital marketing">Digital marketing</option>
+                                    <option value="Ecommerce">Ecommerce</option>
+                                    <option value="Graphic Design">Graphic Design</option>
+                                    
+                                </select>
+
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12 form-group">
-                                <label for="message">Get in Touch</label>
+                                <label >Get in Touch</label>
                                 <textarea name="message" id="message" class="form-control " cols="30" rows="8"></textarea>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6 form-group">
-                                <input type="submit" value="submit" class="btn btn-outline-black px-3 py-3">
+                                <input type="submit" id="submit" value="submit" class="btn btn-outline-black px-3 py-3">
                             </div>
                         </div>
                     </form>
@@ -219,18 +250,20 @@
             </div>
             <div class="row">
                 <div class="col-12 text-md-center text-left">
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+
                     <p class="small">Copyright &copy;
                         <script>
                             document.write(new Date().getFullYear());
                         </script>
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+
                     </p>
                 </div>
             </div>
         </div>
     </footer>
     <!-- END footer -->
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase.js"></script>
+    <script src="../main.js"></script>
 
 
 
